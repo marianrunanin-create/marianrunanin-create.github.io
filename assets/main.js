@@ -70,6 +70,14 @@
     el.textContent = new Date().getFullYear();
   });
 
+  /* ---------- Oznamy s dátumom platnosti (data-expires="RRRR-MM-DD") ---------- */
+
+  var now = new Date();
+  var today = now.getFullYear() + '-' + ('0' + (now.getMonth() + 1)).slice(-2) + '-' + ('0' + now.getDate()).slice(-2);
+  document.querySelectorAll('[data-expires]').forEach(function (el) {
+    if (today > el.getAttribute('data-expires')) el.hidden = true;
+  });
+
   /* ---------- Publikácie: filter a vyhľadávanie ---------- */
 
   var pubs = document.querySelector('[data-pubs]');

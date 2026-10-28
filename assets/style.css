@@ -673,6 +673,33 @@ a.card .go { margin-top: auto; padding-top: 18px; color: var(--accent); font-siz
 }
 .toc a:hover { color: var(--text); border-color: var(--muted); }
 
+/* ---------- Oznamy a skupiny ---------- */
+
+.notices { display: grid; gap: 12px; }
+.notice {
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--line);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: var(--surface);
+}
+.notice h3 { margin: 4px 0 6px; font-size: 1.12rem; }
+.notice p:last-child { margin: 0; color: var(--muted); }
+.notice-meta { margin: 0; color: var(--muted); font-size: .84rem; }
+.notice-important { border-left-color: var(--accent); background: var(--accent-soft); border-color: transparent; border-left-color: var(--accent); }
+.notice-important h3 { color: var(--accent-ink); }
+
+.group-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.group-links .btn { padding: 9px 14px; font-size: .9rem; }
+
+.mail-list { margin: 0; }
+.mail-list div { padding: 8px 0; border-top: 1px solid var(--line); }
+.mail-list div:first-child { border-top: 0; padding-top: 0; }
+.mail-list dt { color: var(--muted); font-size: .82rem; }
+.mail-list dd { margin: 2px 0 0; font-weight: 600; overflow-wrap: anywhere; }
+.mail-list a { text-decoration: none; }
+.mail-list a:hover { text-decoration: underline; }
+
 /* ---------- Tabuľka ---------- */
 
 .table-wrap {
